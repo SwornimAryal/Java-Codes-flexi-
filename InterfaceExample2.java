@@ -12,6 +12,7 @@ class Tata implements Car{
         System.out.println("Tata Brand");
     }
 }
+
 public class InterfaceExample2{
     public static void main(String[] args) {
         Car c = new Maruti();
