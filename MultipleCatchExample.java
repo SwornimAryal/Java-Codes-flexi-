@@ -6,7 +6,7 @@ public class MultipleCatchExample{
             System.out.println(str.length());
         } catch(NullPointerException e){
             // Handling the NullPointerException
-            System.out.println("\n Caught a NullPointerException: " + e.getMessage());
+            System.out.println("\nCaught a NullPointerException: " + e.getMessage());
         } catch(Exception e){
             // Handling any other exceptions that may occur
             System.out.println("\n Caught a general exception: " + e.getMessage());
