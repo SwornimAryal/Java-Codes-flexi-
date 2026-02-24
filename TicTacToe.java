@@ -1,28 +1,40 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class TicTacToe {
+
     static char[] board = {
             '1','2','3',
             '4','5','6',
             '7','8','9'
     };
+
     static char currentPlayer = 'X';
+
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         boolean gameRunning = true;
+
         while (gameRunning) {
+
             printBoard();
+
             try {
+
                 System.out.print("Player " + currentPlayer + ", enter slot (1-9): ");
                 int choice = sc.nextInt();
+
                 if (choice < 1 || choice > 9) {
                     throw new IllegalArgumentException("Invalid slot number.");
                 }
+
                 if (board[choice - 1] == 'X' || board[choice - 1] == 'O') {
                     throw new Exception("Slot already occupied.");
                 }
+
                 board[choice - 1] = currentPlayer;
+
                 if (checkWin()) {
                     printBoard();
                     System.out.println("Player " + currentPlayer + " wins!");
@@ -34,7 +46,8 @@ public class TicTacToe {
                 } else {
                     switchPlayer();
                 }
-            }catch (InputMismatchException e) {
+
+            } catch (InputMismatchException e) {
                 System.out.println("Error: Enter only numbers.");
                 sc.nextLine();
             } catch (IllegalArgumentException e) {
@@ -43,6 +56,7 @@ public class TicTacToe {
                 System.out.println(e.getMessage());
             }
         }
+
         sc.close();
     }
 
@@ -59,12 +73,15 @@ public class TicTacToe {
     static void switchPlayer() {
         currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
     }
+
     static boolean checkWin() {
+
         int[][] winPatterns = {
                 {0,1,2},{3,4,5},{6,7,8},
                 {0,3,6},{1,4,7},{2,5,8},
                 {0,4,8},{2,4,6}
         };
+
         for (int[] p : winPatterns) {
             if (board[p[0]] == currentPlayer &&
                 board[p[1]] == currentPlayer &&
@@ -82,5 +99,3 @@ public class TicTacToe {
         return true;
     }
 }
-
-    
