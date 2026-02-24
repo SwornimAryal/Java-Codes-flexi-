@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class TicTacToe {
 
@@ -15,7 +15,6 @@ public class TicTacToe {
 
         Scanner sc = new Scanner(System.in);
         boolean gameRunning = true;
-
         while (gameRunning) {
 
             printBoard();
