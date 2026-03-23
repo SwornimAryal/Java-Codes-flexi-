@@ -3,22 +3,18 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-
 public class CreateDB {
  public static void main(String[] args) {
 
         String url = "jdbc:mysql://Swornims-MacBook-Air.local:3306/librarydb";
         String user = "root";
         String password = "Swornim@123";  // your mysql password
-
         try {
-
             // Load Driver
             Class.forName("com.mysql.cj.jdbc.Driver");
-
             // Create Connection
             Connection con = DriverManager.getConnection(url, user, password);
-
+\
             System.out.println("Connected to MySQL Database!");
 
             // Create Statement
