@@ -10,11 +10,10 @@ public class CreateDB {
         String user = "root";
         String password = "Swornim@123";  // your mysql password
         try {
-            // Load Driver
+            // Load Driver2
             Class.forName("com.mysql.cj.jdbc.Driver");
             // Create Connection
             Connection con = DriverManager.getConnection(url, user, password);
-\
             System.out.println("Connected to MySQL Database!");
 
             // Create Statement
