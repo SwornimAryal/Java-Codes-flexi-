@@ -1,3 +1,4 @@
+// case study 1: case 1
 class Account {
     protected double balance;
 

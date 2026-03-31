@@ -1,3 +1,4 @@
+// case study 3: case 1
 abstract class Plan {
     private String patientName;
     private double baseFee;

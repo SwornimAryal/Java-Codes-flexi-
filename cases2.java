@@ -1,3 +1,4 @@
+// case study 2: case 2
 class Employee {
     String name;
     double baseSalary;
