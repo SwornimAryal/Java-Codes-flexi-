@@ -3,6 +3,8 @@ package rmi;
 import java.rmi.*;
 
 import java.rmi.registry.*;
+
+import rmi.AddImpl;
 public class RMIServer {
     public static void main(String[] args) throws Exception {
         AddImpl obj = new AddImpl();

@@ -1,6 +1,8 @@
 package rmi;
 import java.rmi.*;
 
+import rmi.AddInterface;
+
 public class RMIClient {
     public static void main(String[] args) throws Exception {
         // Look up the remote object
