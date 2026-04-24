@@ -7,15 +7,12 @@ abstract class Plan {
         this.patientName = patientName;
         this.baseFee = baseFee;
     }
-
     public String getPatientName() {
         return patientName;
     }
-
     public double getBaseFee() {
         return baseFee;
     }
-
     abstract double calculateBill();
 }
 
@@ -23,7 +20,6 @@ class SilverPlan extends Plan {
     public SilverPlan(String patientName, double baseFee) {
         super(patientName, baseFee);
     }
-
     double calculateBill() {
         return getBaseFee() + 15;
     }
@@ -33,7 +29,6 @@ class GoldPlan extends Plan {
     public GoldPlan(String patientName, double baseFee) {
         super(patientName, baseFee);
     }
-
     double calculateBill() {
         double surcharge = getBaseFee() * 0.10;
         return getBaseFee() + surcharge - 20;
